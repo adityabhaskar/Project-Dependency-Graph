@@ -1,8 +1,8 @@
 plugins {
     java
-    id("com.ncorti.kotlin.gradle.template.plugin")
+    id("net.c306.dependencydiagram.plugin")
 }
 
-templateExampleConfig {
+projectDependencyGraphConfig {
     message.set("Just trying this gradle plugin...")
 }

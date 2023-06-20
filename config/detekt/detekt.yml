@@ -2,6 +2,7 @@ build:
   maxIssues: 0
   excludeCorrectable: false
   weights:
+    ForbiddenComment: 0
     # complexity: 2
     # LongParameterList: 1
     # style: 1
@@ -592,7 +593,7 @@ style:
     maxLineLength: 120
     excludePackageStatements: true
     excludeImportStatements: true
-    excludeCommentStatements: false
+    excludeCommentStatements: true
     excludeRawStrings: true
   MayBeConst:
     active: true
@@ -606,7 +607,7 @@ style:
   NestedClassesVisibility:
     active: true
   NewLineAtEndOfFile:
-    active: true
+    active: false
   NoTabs:
     active: false
   NullableBooleanCheck:

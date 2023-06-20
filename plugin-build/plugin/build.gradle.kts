@@ -1,5 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     kotlin("jvm")
     `java-gradle-plugin`
@@ -48,7 +49,9 @@ tasks.create("setupPluginUploadFromEnvironment") {
         val secret = System.getenv("GRADLE_PUBLISH_SECRET")
 
         if (key == null || secret == null) {
-            throw GradleException("gradlePublishKey and/or gradlePublishSecret are not defined environment variables")
+            throw GradleException(
+                "gradlePublishKey and/or gradlePublishSecret are not defined environment variables",
+            )
         }
 
         System.setProperty("gradle.publish.key", key)
